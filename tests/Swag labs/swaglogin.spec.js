@@ -14,4 +14,6 @@ await page.locator("(//a[@class='bm-item menu-item'])[1]").click()
 await (page.locator("//div[normalize-space(text())='Products']")).toBevisible
 
 
+
+
 })
