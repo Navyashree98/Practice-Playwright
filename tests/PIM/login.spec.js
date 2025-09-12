@@ -14,7 +14,7 @@ test('has title', async ({ page }) => {
     await page.locator("//input[@placeholder='Middle Name']").fill("p")
     await page.locator("//input[@placeholder='Last Name']").fill ("shree")
     await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill("990019")
-
+    await page.locator("(//div[@class='oxd-input-group oxd-input-field-bottom-space']//div)[2]").setInputFiles
     await page.locator("//button[@type='submit']").click()
     await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList")
     await page.locator("//span[contains(.,'Dashboard Hari')]").click()
