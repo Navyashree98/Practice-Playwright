@@ -13,8 +13,9 @@ test('login by codegen', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Middle Name' }).fill('shree');
   await page.getByRole('textbox', { name: 'Last Name' }).fill('PN');
   await page.getByRole('button', { name: 'Save' }).click();
-  await page.getByRole('textbox').nth(4).fill('99065');
+  await page.getByRole('textbox').nth(4).fill('9908789');
   await page.getByRole('button', { name: 'Save' }).click();
-  await page.getByRole('menuitem', { name: 'Logout' }).click();
+  await page.locator("//i[contains(@class,'oxd-icon bi-caret-down-fill')]").click()
+
 
 });
